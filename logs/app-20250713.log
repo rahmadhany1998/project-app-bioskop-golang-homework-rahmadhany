@@ -1,0 +1,24 @@
+{"L":"ERROR","timestamp":"2025-07-13T11:23:08.646+0800","C":"usecase/user.go:66","M":"Failed to generate token","error":"key is of invalid type: HMAC sign expects []byte"}
+{"L":"ERROR","timestamp":"2025-07-13T11:23:08.649+0800","C":"adaptor/user.go:70","M":"error : ","error":"key is of invalid type: HMAC sign expects []byte"}
+{"L":"INFO","timestamp":"2025-07-13T11:23:08.650+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/login","duration":"1.7479229s"}
+{"L":"INFO","timestamp":"2025-07-13T11:27:45.820+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/login","duration":"323.5937ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:28:17.593+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"2.414ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:28:24.741+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"895.9µs"}
+{"L":"INFO","timestamp":"2025-07-13T11:28:31.403+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"1.7294ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:28:43.370+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/logout","duration":"5.2102ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:28:53.472+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"1.4279ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:28:56.777+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"1.1343ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:28:58.329+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"920.4µs"}
+{"L":"INFO","timestamp":"2025-07-13T11:29:09.065+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/logout","duration":"1.2468ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:29:11.326+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/logout","duration":"877.3µs"}
+{"L":"INFO","timestamp":"2025-07-13T11:29:59.759+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/logout","duration":"0s"}
+{"L":"INFO","timestamp":"2025-07-13T11:30:34.687+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/logout","duration":"0s"}
+{"L":"INFO","timestamp":"2025-07-13T11:30:36.400+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/logout","duration":"0s"}
+{"L":"INFO","timestamp":"2025-07-13T11:31:00.520+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/login","duration":"359.0069ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:31:34.198+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"3.3664ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:32:31.684+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/login","duration":"137.7898ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:32:41.240+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"509.8µs"}
+{"L":"INFO","timestamp":"2025-07-13T11:32:51.291+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"532µs"}
+{"L":"INFO","timestamp":"2025-07-13T11:34:02.508+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"1.3846ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:35:19.427+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"2.9097ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:37:03.464+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"155.4259ms"}

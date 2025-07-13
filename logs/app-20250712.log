@@ -1,0 +1,43 @@
+{"L":"ERROR","timestamp":"2025-07-12T19:54:46.913+0800","C":"usecase/user.go:42","M":"data not found","error":"pq: database \ufffd go_cinema \ufffd tidak ada"}
+{"L":"ERROR","timestamp":"2025-07-12T19:54:46.941+0800","C":"adaptor/user.go:38","M":"error : ","error":"pq: database \ufffd go_cinema \ufffd tidak ada"}
+{"L":"INFO","timestamp":"2025-07-12T19:54:46.944+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/users/","duration":"548.1314ms"}
+{"L":"INFO","timestamp":"2025-07-12T20:05:54.505+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/users/","duration":"233.4948ms"}
+{"L":"INFO","timestamp":"2025-07-12T20:07:58.262+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/users/1","duration":"2.3196ms"}
+{"L":"ERROR","timestamp":"2025-07-12T20:10:32.196+0800","C":"adaptor/user.go:70","M":"error : ","error":"Key: 'CreateUserRequest.Email' Error:Field validation for 'Email' failed on the 'email' tag"}
+{"L":"INFO","timestamp":"2025-07-12T20:10:32.196+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/users/","duration":"3.2511ms"}
+{"L":"INFO","timestamp":"2025-07-12T20:10:41.464+0800","C":"repository/user.go:68","M":"user created : ","insert":"id : 2"}
+{"L":"INFO","timestamp":"2025-07-12T20:10:41.465+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/users/","duration":"7.0286ms"}
+{"L":"INFO","timestamp":"2025-07-12T20:13:19.812+0800","C":"repository/user.go:76","M":"user updated : ","update":"id : 2"}
+{"L":"INFO","timestamp":"2025-07-12T20:13:19.813+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"PUT","path":"/api/v1/users/2","duration":"18.1766ms"}
+{"L":"INFO","timestamp":"2025-07-12T20:14:05.612+0800","C":"repository/user.go:82","M":"user deleted : ","delete":"id : 2"}
+{"L":"INFO","timestamp":"2025-07-12T20:14:05.612+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"DELETE","path":"/api/v1/users/2","duration":"1.6861ms"}
+{"L":"INFO","timestamp":"2025-07-12T20:34:58.335+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/users/","duration":"147.0634ms"}
+{"L":"INFO","timestamp":"2025-07-12T20:35:04.600+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/users/1","duration":"510.8µs"}
+{"L":"INFO","timestamp":"2025-07-12T20:35:14.757+0800","C":"repository/user.go:68","M":"user created : ","insert":"id : 3"}
+{"L":"INFO","timestamp":"2025-07-12T20:35:14.758+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/users/","duration":"3.4839ms"}
+{"L":"INFO","timestamp":"2025-07-12T20:35:38.742+0800","C":"repository/user.go:76","M":"user updated : ","update":"id : 3"}
+{"L":"ERROR","timestamp":"2025-07-12T20:35:38.742+0800","C":"usecase/user.go:85","M":"cannot update user","error":"pq: kolom  « name » dari relasi « users » tidak ada"}
+{"L":"ERROR","timestamp":"2025-07-12T20:35:38.742+0800","C":"adaptor/user.go:100","M":"error : ","error":"pq: kolom  « name » dari relasi « users » tidak ada"}
+{"L":"INFO","timestamp":"2025-07-12T20:35:38.743+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"PUT","path":"/api/v1/users/3","duration":"7.6478ms"}
+{"L":"INFO","timestamp":"2025-07-12T20:36:35.307+0800","C":"repository/user.go:76","M":"user updated : ","update":"id : 3"}
+{"L":"INFO","timestamp":"2025-07-12T20:36:35.308+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"PUT","path":"/api/v1/users/3","duration":"164.5041ms"}
+{"L":"INFO","timestamp":"2025-07-12T20:37:39.967+0800","C":"repository/user.go:82","M":"user deleted : ","delete":"id : 3"}
+{"L":"INFO","timestamp":"2025-07-12T20:37:39.967+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"DELETE","path":"/api/v1/users/3","duration":"5.7647ms"}
+{"L":"ERROR","timestamp":"2025-07-12T21:30:36.010+0800","C":"adaptor/user.go:37","M":"error : ","error":"Key: 'User.Password' Error:Field validation for 'Password' failed on the 'required' tag"}
+{"L":"INFO","timestamp":"2025-07-12T21:30:36.012+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/register","duration":"3.8533ms"}
+{"L":"INFO","timestamp":"2025-07-12T21:32:11.206+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/register","duration":"287.8757ms"}
+{"L":"INFO","timestamp":"2025-07-12T21:33:00.882+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/login","duration":"136.5479ms"}
+{"L":"ERROR","timestamp":"2025-07-12T21:33:13.725+0800","C":"adaptor/user.go:62","M":"error : ","error":"Key: 'LoginRequest.Password' Error:Field validation for 'Password' failed on the 'min' tag"}
+{"L":"INFO","timestamp":"2025-07-12T21:33:13.725+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/login","duration":"1.5907ms"}
+{"L":"WARN","timestamp":"2025-07-12T21:33:22.906+0800","C":"usecase/user.go:60","M":"Incorrect password","username":"sheila"}
+{"L":"INFO","timestamp":"2025-07-12T21:33:22.908+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/login","duration":"152.4882ms"}
+{"L":"INFO","timestamp":"2025-07-12T21:35:17.404+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/login","duration":"134.8857ms"}
+{"L":"INFO","timestamp":"2025-07-12T21:55:16.296+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/login","duration":"354.8921ms"}
+{"L":"ERROR","timestamp":"2025-07-12T22:50:05.305+0800","C":"usecase/user.go:70","M":"Failed to save token","error":"pq: kolom  « token » dari relasi « tokens » tidak ada"}
+{"L":"INFO","timestamp":"2025-07-12T22:50:05.307+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/login","duration":"307.0554ms"}
+{"L":"INFO","timestamp":"2025-07-12T22:51:59.016+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/login","duration":"141.8193ms"}
+{"L":"INFO","timestamp":"2025-07-12T22:53:10.572+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"0s"}
+{"L":"INFO","timestamp":"2025-07-12T22:53:25.688+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"1.3208ms"}
+{"L":"INFO","timestamp":"2025-07-12T22:56:23.586+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/logout","duration":"513.4µs"}
+{"L":"INFO","timestamp":"2025-07-12T22:56:38.605+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/logout","duration":"167.1769ms"}
+{"L":"INFO","timestamp":"2025-07-12T22:57:03.631+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"2.9984ms"}
