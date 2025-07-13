@@ -22,3 +22,12 @@
 {"L":"INFO","timestamp":"2025-07-13T11:34:02.508+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"1.3846ms"}
 {"L":"INFO","timestamp":"2025-07-13T11:35:19.427+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"2.9097ms"}
 {"L":"INFO","timestamp":"2025-07-13T11:37:03.464+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"155.4259ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:38:42.171+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"195.6063ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:38:43.913+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"1.165ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:39:09.325+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"0s"}
+{"L":"INFO","timestamp":"2025-07-13T11:39:17.125+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/login","duration":"156.6415ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:39:33.307+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"930.9µs"}
+{"L":"INFO","timestamp":"2025-07-13T11:39:38.253+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/logout","duration":"0s"}
+{"L":"INFO","timestamp":"2025-07-13T11:39:40.836+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/logout","duration":"0s"}
+{"L":"INFO","timestamp":"2025-07-13T11:39:52.887+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/logout","duration":"1.6581ms"}
+{"L":"INFO","timestamp":"2025-07-13T11:40:03.068+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"1.3411ms"}
