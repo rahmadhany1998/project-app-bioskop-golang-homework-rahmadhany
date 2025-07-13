@@ -8,11 +8,13 @@ import (
 )
 
 type Service struct {
-	UserService UserService
+	UserService   UserService
+	CinemaService CinemaService
 }
 
 func NewService(repo repository.Repository, logger *zap.Logger, config utils.Configuration) Service {
 	return Service{
-		UserService: NewUserService(repo, logger, config),
+		UserService:   NewUserService(repo, logger, config),
+		CinemaService: NewCinemaService(repo, logger, config),
 	}
 }

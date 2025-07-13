@@ -7,13 +7,19 @@ import (
 )
 
 type Repository struct {
-	UserRepo  UserRepository
-	TokenRepo TokenRepository
+	UserRepo    UserRepository
+	TokenRepo   TokenRepository
+	CinemaRepo  CinemaRepository
+	BookingRepo BookingRepository
+	SeatRepo    SeatRepository
 }
 
 func NewRepository(db *sql.DB, log *zap.Logger) Repository {
 	return Repository{
-		UserRepo:  NewUserRepository(db, log),
-		TokenRepo: NewTokenRepository(db, log),
+		UserRepo:    NewUserRepository(db, log),
+		TokenRepo:   NewTokenRepository(db, log),
+		CinemaRepo:  NewCinemaRepository(db, log),
+		BookingRepo: NewBookingRepository(db, log),
+		SeatRepo:    NewSeatRepository(db, log),
 	}
 }

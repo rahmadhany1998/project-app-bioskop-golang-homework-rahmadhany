@@ -18,6 +18,8 @@ func Wiring(repo repository.Repository, mLogger middleware.LoggerMiddleware, log
 	router.Use(mLogger.LoggingMiddleware)
 	rV1 := chi.NewRouter()
 	wireUser(rV1, repo, logger, config)
+	wireCinema(rV1, repo, logger, config)
+	wireBooking(rV1, repo, logger, config)
 	router.Mount("/api/v1", rV1)
 
 	return router
@@ -43,5 +45,23 @@ func wireUser(router *chi.Mux, repo repository.Repository, logger *zap.Logger, c
 				"username":   username,
 			})
 		})
+	})
+}
+
+func wireCinema(router *chi.Mux, repo repository.Repository, logger *zap.Logger, config utils.Configuration) {
+	usecaseCinema := usecase.NewCinemaService(repo, logger, config)
+	adaptorCinema := adaptor.NewCinemaHandler(usecaseCinema, logger, config)
+	router.Get("/cinemas", adaptorCinema.GetAll)
+	router.Get("/cinemas/{id}", adaptorCinema.GetByID)
+
+}
+
+func wireBooking(router *chi.Mux, repo repository.Repository, logger *zap.Logger, config utils.Configuration) {
+	usecaseBooking := usecase.NewBookingService(repo, logger, config)
+	adaptorBooking := adaptor.NewBookingHandler(usecaseBooking, logger, config)
+
+	router.Group(func(protected chi.Router) {
+		protected.Use(middleware.AuthMiddlewareWithRepo(repo)) // <-- gunakan middleware autentikasi di sini
+		protected.Post("/booking", adaptorBooking.CreateBooking)
 	})
 }

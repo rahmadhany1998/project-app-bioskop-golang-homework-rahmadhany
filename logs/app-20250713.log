@@ -31,3 +31,17 @@
 {"L":"INFO","timestamp":"2025-07-13T11:39:40.836+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/logout","duration":"0s"}
 {"L":"INFO","timestamp":"2025-07-13T11:39:52.887+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/logout","duration":"1.6581ms"}
 {"L":"INFO","timestamp":"2025-07-13T11:40:03.068+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/user/profile","duration":"1.3411ms"}
+{"L":"INFO","timestamp":"2025-07-13T12:24:13.089+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/cinemas","duration":"190.2903ms"}
+{"L":"INFO","timestamp":"2025-07-13T12:25:52.173+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/cinemas","duration":"213.9356ms"}
+{"L":"INFO","timestamp":"2025-07-13T12:41:50.473+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/cinemas/1","duration":"189.082ms"}
+{"L":"INFO","timestamp":"2025-07-13T12:41:56.232+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"GET","path":"/api/v1/cinemas/2","duration":"848.3µs"}
+{"L":"ERROR","timestamp":"2025-07-13T13:09:28.322+0800","C":"adaptor/user.go:63","M":"error : ","error":"Key: 'LoginRequest.Password' Error:Field validation for 'Password' failed on the 'required' tag"}
+{"L":"INFO","timestamp":"2025-07-13T13:09:28.325+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/login","duration":"3.0687ms"}
+{"L":"INFO","timestamp":"2025-07-13T13:43:53.928+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/booking","duration":"659µs"}
+{"L":"INFO","timestamp":"2025-07-13T13:44:08.109+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/login","duration":"331.9511ms"}
+{"L":"INFO","timestamp":"2025-07-13T13:44:41.166+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/booking","duration":"22.3784ms"}
+{"L":"INFO","timestamp":"2025-07-13T13:45:53.014+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/booking","duration":"168.7049ms"}
+{"L":"INFO","timestamp":"2025-07-13T13:51:11.738+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/booking","duration":"306.6646ms"}
+{"L":"INFO","timestamp":"2025-07-13T13:53:07.279+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/booking","duration":"169.2951ms"}
+{"L":"INFO","timestamp":"2025-07-13T13:59:59.380+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/booking","duration":"158.9973ms"}
+{"L":"INFO","timestamp":"2025-07-13T14:00:50.889+0800","C":"middleware/logger.go:26","M":"HTTP Request","method":"POST","path":"/api/v1/booking","duration":"25.0075ms"}
