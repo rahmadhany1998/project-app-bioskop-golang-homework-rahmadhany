@@ -13,6 +13,7 @@ import (
 type CinemaService interface {
 	GetAll(ctx context.Context, page, limit int) ([]entity.Cinema, int, int, error)
 	GetByID(ctx context.Context, id int) (*entity.Cinema, error)
+	GetSeatStatus(ctx context.Context, cinemaID int, date, time string) ([]entity.Seat, error)
 }
 
 type cinemaService struct {
@@ -50,4 +51,8 @@ func (s *cinemaService) GetAll(ctx context.Context, page, limit int) ([]entity.C
 
 func (s *cinemaService) GetByID(ctx context.Context, id int) (*entity.Cinema, error) {
 	return s.Repo.CinemaRepo.GetByID(ctx, id)
+}
+
+func (s *cinemaService) GetSeatStatus(ctx context.Context, cinemaID int, date, time string) ([]entity.Seat, error) {
+	return s.Repo.SeatRepo.GetSeatStatusBySchedule(ctx, cinemaID, date, time)
 }

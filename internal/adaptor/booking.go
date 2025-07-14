@@ -51,3 +51,13 @@ func (h *BookingHandler) CreateBooking(w http.ResponseWriter, r *http.Request) {
 
 	utils.WriteSuccess(w, "Booking Confirmed", http.StatusOK, booking, nil)
 }
+
+func (h *BookingHandler) GetBookingHistory(w http.ResponseWriter, r *http.Request) {
+	userID := r.Context().Value(middleware.ContextUserID).(int)
+	history, err := h.Booking.GetUserBookingHistory(r.Context(), userID)
+	if err != nil {
+		utils.WriteError(w, "Failed to retrieve booking history"+err.Error(), http.StatusInternalServerError)
+		return
+	}
+	utils.WriteSuccess(w, "Your Booking History", http.StatusOK, history, nil)
+}

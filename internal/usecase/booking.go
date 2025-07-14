@@ -14,6 +14,7 @@ import (
 
 type BookingService interface {
 	CreateBooking(ctx context.Context, req dto.BookingRequest, userID int) (*entity.Booking, error)
+	GetUserBookingHistory(ctx context.Context, userID int) ([]entity.BookingHistory, error)
 }
 
 type bookingService struct {
@@ -57,4 +58,8 @@ func (s *bookingService) CreateBooking(ctx context.Context, req dto.BookingReque
 		return nil, err
 	}
 	return booking, nil
+}
+
+func (s *bookingService) GetUserBookingHistory(ctx context.Context, userID int) ([]entity.BookingHistory, error) {
+	return s.Repo.BookingRepo.GetBookingHistory(ctx, userID)
 }

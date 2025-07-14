@@ -53,3 +53,21 @@ func (h *CinemaHandler) GetByID(w http.ResponseWriter, r *http.Request) {
 	}
 	utils.WriteSuccess(w, "Cinema found", http.StatusOK, cinema, nil)
 }
+
+func (h *CinemaHandler) GetSeatAvailability(w http.ResponseWriter, r *http.Request) {
+	cinemaIDStr := chi.URLParam(r, "id")
+	cinemaID, err := strconv.Atoi(cinemaIDStr)
+	if err != nil {
+		utils.WriteError(w, "Invalid cinema ID", http.StatusBadRequest)
+		return
+	}
+	date := r.URL.Query().Get("date")
+	time := r.URL.Query().Get("time")
+
+	seats, err := h.Cinema.GetSeatStatus(r.Context(), cinemaID, date, time)
+	if err != nil || len(seats) == 0 {
+		utils.WriteError(w, "No available seats found for the specified cinema and schedule.", http.StatusNotFound)
+		return
+	}
+	utils.WriteSuccess(w, "", http.StatusOK, seats, nil)
+}

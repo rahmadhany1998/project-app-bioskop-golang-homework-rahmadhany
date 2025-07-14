@@ -11,6 +11,7 @@ import (
 type BookingRepository interface {
 	IsSeatBooked(ctx context.Context, cinemaID int, seatCode int, date, time string) (bool, error)
 	CreateBooking(ctx context.Context, booking *entity.Booking) error
+	GetBookingHistory(ctx context.Context, userID int) ([]entity.BookingHistory, error)
 }
 
 type bookingRepository struct {
@@ -37,4 +38,30 @@ func (r *bookingRepository) CreateBooking(ctx context.Context, b *entity.Booking
 	VALUES ($1, $2, $3, $4, $5, $6, $7, $8, CURRENT_TIMESTAMP)`
 	_, err := r.db.ExecContext(ctx, query, b.ID, b.UserID, b.CinemaID, b.SeatID, b.Date, b.Time, b.PaymentMethod, b.Status)
 	return err
+}
+
+func (r *bookingRepository) GetBookingHistory(ctx context.Context, userID int) ([]entity.BookingHistory, error) {
+	query := `SELECT b.id, c.name, s.seat_code, b.booking_date, b.booking_time, p.payment_method, b.status
+		FROM bookings b
+		JOIN cinemas c ON b.cinema_id = c.id
+		JOIN seats s ON b.seat_id = s.id
+		LEFT JOIN payments p ON b.id = p.booking_id
+		WHERE b.user_id = $1 ORDER BY b.booking_date DESC, b.booking_time DESC`
+
+	rows, err := r.db.QueryContext(ctx, query, userID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var history []entity.BookingHistory
+	for rows.Next() {
+		var h entity.BookingHistory
+		err := rows.Scan(&h.BookingID, &h.CinemaName, &h.SeatCode, &h.BookingDate, &h.BookingTime, &h.PaymentMethod, &h.Status)
+		if err != nil {
+			return nil, err
+		}
+		history = append(history, h)
+	}
+	return history, nil
 }

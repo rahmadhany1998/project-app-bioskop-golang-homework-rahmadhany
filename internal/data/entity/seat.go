@@ -1,8 +1,8 @@
 package entity
 
 type Seat struct {
-	ID       int    `json:"seatId"`
-	CinemaID int    `json:"cinemaId"`
+	ID       int    `json:"seatId,omitempty"`
+	CinemaID int    `json:"cinemaId,omitempty"`
 	SeatCode string `json:"seatCode"`
 	Status   string `json:"status,omitempty"` // available / booked (optional for availability API)
 }

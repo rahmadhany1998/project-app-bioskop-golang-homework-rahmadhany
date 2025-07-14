@@ -14,7 +14,7 @@ type Pagination struct {
 
 type Response struct {
 	Success    bool        `json:"success"`
-	Message    string      `json:"message"`
+	Message    string      `json:"message,omitempty"`
 	Data       interface{} `json:"data,omitempty"`
 	Pagination *Pagination `json:"pagination,omitempty"`
 }
